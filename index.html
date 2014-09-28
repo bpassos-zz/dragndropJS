@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drag and drop</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="wrap">
+		<h1>Image library</h1>
+		<div id="view">
+			
+		</div>
+		<div id="grid">
+			<div class="frame"><img src="imgs/conference-hall.jpg" alt="Conference Hall" draggable="true"></div>
+			<div class="frame"><img src="imgs/fia.png" alt="Front in Amsterdam" draggable="true"></div>
+			<div class="frame"><img src="imgs/git.png" alt="Git" draggable="true"></div>
+		</div>
+	</div>
+
+<script src="js/script.js"></script>
+<!-- <script>
+	function handleDragStart(e) {
+		// Source is the element to be dragged.
+
+		source = this;
+		e.dataTransfer.effectAllowed = 'move';
+		e.dataTransfer.setData('text', this.innerHTML);
+	}
+
+	function handleDragOver(e) {
+		// It is helpful to prevent browsers default, which usally results in unwanted redirect.
+		if (e.preventDefault) {
+			e.preventDefault();
+		}
+		this.classList.add('over');
+		return false;
+	}
+
+	function handleDrop(e) {
+		// Preventing browser default will help in this case with Firefox, which links to the image by default
+		if (e.preventDefault) {
+			e.preventDefault();
+		}
+		source.innerHTML = this.innerHTML;
+		this.innerHTML = e.dataTransfer.getData('text');
+	}
+	this.classList.remove('over');
+
+	function handleDragLeave(e) {
+		this.classList.remove('over'); // This / e.target is previous target element.
+	}
+	fra.addEventListener('dragleave', handleDragLeave, false);
+
+	var fras = document.querySelectorAll ('.frame');
+	[].forEach.call(fras, function(fra) {
+		fra.addEventListener('dragstart', handleDragStart, false);
+		fra.addEventListener('dragover', handleDragOver, false);
+		
+		fra.addEventListenerx('drop', handledrop, false);
+	});
+</script> -->
+</body>
+</html>
